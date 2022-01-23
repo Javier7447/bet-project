@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from data_extraction.constants import codes_transfermrkt
+from data_extraction.utils.constants import codes_transfermrkt
 import numpy as np
 import unidecode
 from abstract_extract import data_extraction
@@ -51,8 +51,6 @@ class GetDataTransfermarket(data_extraction):
         Returns:
             [persist_data]: [True or False if you want to save the dataframe]
         """
-        # [TODO] Add output of code generator function and replace the constant import
-        # "codes_transfermkt"
 
         all_clubs = pd.DataFrame(index=[0]) 
         codes_transfermrkt = self.codes_generation()
